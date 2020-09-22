@@ -16,7 +16,6 @@ if(NOT ARM64)
    add_subdirectory(client)
 endif()
 
-SET( CMAKE_SHARED_LINKER_FLAGS(-Wl, --no-as-needed))
 target_link_libraries(mmal mmal_core mmal_util mmal_vc_client vcos mmal_components)
 
 install(TARGETS mmal DESTINATION lib)
