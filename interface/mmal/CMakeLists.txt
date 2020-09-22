@@ -4,7 +4,7 @@ set(LIBRARY_TYPE SHARED)
 endif (NOT DEFINED LIBRARY_TYPE)
 
 add_definitions(-Wall -Werror)
-SET( CMAKE_SHARED_LINKER_FLAGS(-Wl, --no-as-needed))
+set (CMAKE_SHARED_LINKER_FLAGS "-Wl,--as-needed")
 
 add_library(mmal SHARED util/mmal_util.c)
 
